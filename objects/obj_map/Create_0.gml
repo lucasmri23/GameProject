@@ -32,5 +32,12 @@ for(var xx = 0;xx<cell_h;xx++){
 		if(grid[# xx,yy] == 0){
 			instance_create_layer(xx*cell_t,yy*cell_t,"instances",obj_colisao);
 		}
+		if(grid[# xx,yy] ==1 ){
+			var x1 = xx*cell_t+cell_t/2;
+			var y1 = yy*cell_t+cell_t/2;
+			if(!instance_exists(obj_player)){
+				instance_create_layer(x1,y1,"instances",obj_player)
+			}
+		}
 	}
 }
