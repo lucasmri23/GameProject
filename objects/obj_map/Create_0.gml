@@ -7,6 +7,11 @@ cell_v = room_height div cell_t;
 grid = ds_grid_create(cell_h,cell_v);
 ds_grid_clear(grid,0);
 
+// Pega o tilemap da camada 'tileset'
+var layer_id = layer_get_id("tileset");
+var tilemap_id = layer_tilemap_get_id(layer_id);
+
+
 randomize();
 var dir = irandom(3);
 var xx = cell_h div 2;
@@ -29,9 +34,13 @@ for(var i = 0; i<passos; i+=1){
 
 for(var xx = 0;xx<cell_h;xx++){
 	for(var yy = 0;yy<cell_v;yy++){
-		if(grid[# xx,yy] == 0){
-			instance_create_layer(xx*cell_t,yy*cell_t,"instances",obj_colisao);
-		}
+		if (grid[# xx, yy] == 0) {
+    // Cria o tile usando autotile
+    tilemap_autotile(tilemap_id, xx, yy, true);
+    
+    // Coloca colisão como antes (opcional, se você usar tiles apenas para estética)
+    instance_create_layer(xx * cell_t, yy * cell_t, "instances", obj_colisao);
+}
 		if(grid[# xx,yy] ==1 ){
 			var x1 = xx*cell_t+cell_t/2;
 			var y1 = yy*cell_t+cell_t/2;
