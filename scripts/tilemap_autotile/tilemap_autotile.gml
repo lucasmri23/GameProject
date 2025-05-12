@@ -66,7 +66,7 @@ function tilemap_autotile(_map, _cx, _cy, _addTile, _fill_edges = false)
             // Large switch of constants is a jump-table of O(1) at runtime no worries 
             switch _mask 
             {
-                case 255 : _mask = 48; break; case 254 : _mask =  1; break; case 251 : _mask =  2; break; 
+                case 255 : _mask = 50; break; case 254 : _mask =  1; break; case 251 : _mask =  2; break; 
                 case 250 : _mask =  3; break; case 248 : _mask = 20; break; case 223 : _mask =  8; break; 
                 case 222 : _mask =  9; break; case 219 : _mask = 10; break; case 218 : _mask = 11; break; 
                 case 216 : _mask = 22; break; case 214 : _mask = 16; break; case 210 : _mask = 17; break; 
