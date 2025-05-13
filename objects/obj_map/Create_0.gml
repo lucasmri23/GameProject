@@ -6,6 +6,7 @@ cell_v = room_height div cell_t;
 
 grid = ds_grid_create(cell_h,cell_v);
 ds_grid_clear(grid,0);
+mp_grid = mp_grid_create(0,0,cell_h,cell_v,cell_t,cell_t);
 
 // Pega o tilemap da camada 'tileset'
 var layer_id = layer_get_id("tileset");
@@ -77,3 +78,5 @@ for(var xx = 0;xx<cell_h;xx++){
 		
 	}
 }
+
+mp_grid_add_instances(mp_grid,obj_colisao,false);
