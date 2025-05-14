@@ -12,26 +12,32 @@ mp_grid = mp_grid_create(0,0,cell_h,cell_v,cell_t,cell_t);
 var layer_id = layer_get_id("tileset");
 var tilemap_id = layer_tilemap_get_id(layer_id);
 
-
 randomize();
 var dir = irandom(3);
 var xx = cell_h div 2;
 var yy = cell_v div 2;
-var chances = 1;
-var passos = 400;
-var num_enemy1 = irandom_range(5,15);
+//teste dungeon
+var room_count = 20;
+var room_size = 1;
+var num_enemy1 = irandom_range(7,15);
 
-for(var i = 0; i<passos; i+=1){
-	if(irandom(chances) == chances){
-		dir = irandom(3);
-	}
-	xx+=lengthdir_x(1,dir*90);
-	yy+=lengthdir_y(1,dir*90);
-
-	xx = clamp(xx,2,cell_h-2);
-	yy = clamp(yy,2,cell_v-2);
+for(var i = 0; i<room_count; i++){
+	ds_grid_set_region(grid,xx-room_size,yy-room_size,xx+room_size,yy+room_size,1);
+	var path_distance = room_size*5;
 	
-	grid[# xx,yy] = 1;
+	while(path_distance>0){
+		grid[# xx,yy] = 1;
+		xx+=lengthdir_x(1,dir*90);
+		yy+=lengthdir_y(1,dir*90);
+		xx = clamp(xx,3,cell_h-3);
+		yy = clamp(yy,3,cell_v-3);
+		path_distance--;
+	}
+	if(path_distance==0){
+		//cria sala
+		ds_grid_set_region(grid,xx-room_size,yy-room_size,xx+room_size,yy+room_size,1);
+		dir = irandom(3)
+	}
 }
 
 for(var xx = 0;xx<cell_h;xx++){
@@ -39,7 +45,6 @@ for(var xx = 0;xx<cell_h;xx++){
 		if (grid[# xx, yy] == 0) {
 			// Cria o tile usando autotile
 			tilemap_autotile(tilemap_id, xx, yy, true);
-    
 			// Coloca colisão como antes 
 			instance_create_layer(xx * cell_t, yy * cell_t, "instances", obj_colisao);
 		}
@@ -50,9 +55,9 @@ for(var xx = 0;xx<cell_h;xx++){
 				instance_create_layer(x1,y1,"instances",obj_player);
 			}
 			if(num_enemy1>0){
-				var chances = 15;
-				var enemy_min_dist_player = 150;
-				var enemy_min_dist_other = 100;
+				var chances = 10;
+				var enemy_min_dist_player = 130;
+				var enemy_min_dist_other = 50;
 				
 				if(irandom(chances)== chances){
 					
