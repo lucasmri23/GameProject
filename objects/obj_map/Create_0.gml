@@ -8,6 +8,10 @@ grid = ds_grid_create(cell_h,cell_v);
 ds_grid_clear(grid,0);
 mp_grid = mp_grid_create(0,0,cell_h,cell_v,cell_t,cell_t);
 
+global.grafo = ds_map_create(); // Grafo: sala -> lista de conexões
+global.grafo_salas = [];global.grafo_salas_length_last = -1;// Lista para armazenar coordenadas das salas
+global.exibir_grafo = false;    // Toggle para desenhar ou não
+
 // Pega o tilemap da camada 'tileset'
 var layer_id = layer_get_id("tileset");
 var tilemap_id = layer_tilemap_get_id(layer_id);
@@ -21,6 +25,16 @@ var room_count = 25;
 var room_size = 1;
 var num_enemy1 = irandom_range(7,15);
 
+function sala_ja_existente(xx, yy, dist_minima = 3) {
+    for (var i = 0; i < array_length(global.grafo_salas); i++) {
+        var sala = global.grafo_salas[i];
+        if (point_distance(sala[0], sala[1], xx, yy) <= dist_minima) {
+            return i; // já existe, retorna o índice
+        }
+    }
+    return -1; // não existe
+}
+
 for(var i = 0; i<room_count; i++){
 	ds_grid_set_region(grid,xx-room_size,yy-room_size,xx+room_size,yy+room_size,1);
 	var path_distance = room_size*5;
@@ -33,11 +47,38 @@ for(var i = 0; i<room_count; i++){
 		yy = clamp(yy,3,cell_v-3);
 		path_distance--;
 	}
-	if(path_distance==0){
-		//cria sala
-		ds_grid_set_region(grid,xx-room_size,yy-room_size,xx+room_size,yy+room_size,1);
-		dir = irandom(3)
-	}
+if(path_distance == 0){
+    //cria sala na grid
+    ds_grid_set_region(grid, xx - room_size, yy - room_size, xx + room_size, yy + room_size, 1);
+
+    // verifica se já existe uma sala próxima
+    var sala_existente = sala_ja_existente(xx, yy, 3); // distância em células (ajuste se necessário)
+    var sala_index;
+
+    if (sala_existente == -1) {
+        sala_index = array_length(global.grafo_salas);
+        var sala_coord = [xx, yy];
+        array_push(global.grafo_salas, sala_coord);
+
+        var conexoes = ds_list_create();
+        ds_map_add(global.grafo, string(sala_index), conexoes);
+    } else {
+        sala_index = sala_existente;
+    }
+
+    // conecta com sala anterior, se não for a primeira
+    if (i > 0) {
+        var anterior = string(global.grafo_salas_length_last); // usamos índice anterior real
+        ds_list_add(ds_map_find_value(global.grafo, anterior), sala_index);
+        ds_list_add(ds_map_find_value(global.grafo, string(sala_index)), global.grafo_salas_length_last);
+    }
+
+    // salva o índice da última sala registrada válida
+    global.grafo_salas_length_last = sala_index;
+
+    dir = irandom(3);
+}
+
 }
 
 for(var xx = 0;xx<cell_h;xx++){
