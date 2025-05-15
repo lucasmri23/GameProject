@@ -17,7 +17,7 @@ var dir = irandom(3);
 var xx = cell_h div 2;
 var yy = cell_v div 2;
 //teste dungeon
-var room_count = 20;
+var room_count = 25;
 var room_size = 1;
 var num_enemy1 = irandom_range(7,15);
 
@@ -55,9 +55,9 @@ for(var xx = 0;xx<cell_h;xx++){
 				instance_create_layer(x1,y1,"instances",obj_player);
 			}
 			if(num_enemy1>0){
-				var chances = 10;
+				var chances = 5;
 				var enemy_min_dist_player = 130;
-				var enemy_min_dist_other = 50;
+				var enemy_min_dist_other = 100;
 				
 				if(irandom(chances)== chances){
 					
