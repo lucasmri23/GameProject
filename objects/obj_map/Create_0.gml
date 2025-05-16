@@ -21,7 +21,7 @@ var dir = irandom(3);
 var xx = cell_h div 2;
 var yy = cell_v div 2;
 //teste dungeon
-var room_count = 25;
+var room_count = 22;
 var room_size = 1;
 var num_enemy1 = irandom_range(7,15);
 
@@ -37,7 +37,7 @@ function sala_ja_existente(xx, yy, dist_minima = 3) {
 
 for(var i = 0; i<room_count; i++){
 	ds_grid_set_region(grid,xx-room_size,yy-room_size,xx+room_size,yy+room_size,1);
-	var path_distance = room_size*5;
+	var path_distance = room_size*6;
 	
 	while(path_distance>0){
 		grid[# xx,yy] = 1;
