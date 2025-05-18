@@ -1,3 +1,13 @@
+//struct das salas
+function Sala(_id,_x,_y)constructor{
+	id = _id;
+	x = _x;
+	y = _y;
+	conexoes = [];
+	tipo = "comum";
+}
+
+
 cell_t =32;
 room_width = cell_t * 40
 room_height = room_width div 2;
@@ -28,7 +38,7 @@ var num_enemy1 = irandom_range(7,15);
 function sala_ja_existente(xx, yy, dist_minima = 3) {
     for (var i = 0; i < array_length(global.grafo_salas); i++) {
         var sala = global.grafo_salas[i];
-        if (point_distance(sala[0], sala[1], xx, yy) <= dist_minima) {
+        if (point_distance(sala.x, sala.y, xx, yy) <= dist_minima) {
             return i; // já existe, retorna o índice
         }
     }
@@ -56,9 +66,9 @@ if(path_distance == 0){
     var sala_index;
 
     if (sala_existente == -1) {
-        sala_index = array_length(global.grafo_salas);
-        var sala_coord = [xx, yy];
-        array_push(global.grafo_salas, sala_coord);
+        var sala_index = array_length(global.grafo_salas);
+		var nova_sala = new Sala(sala_index, xx, yy);
+		array_push(global.grafo_salas, nova_sala);
 
         var conexoes = ds_list_create();
         ds_map_add(global.grafo, string(sala_index), conexoes);
@@ -68,9 +78,11 @@ if(path_distance == 0){
 
     // conecta com sala anterior, se não for a primeira
     if (i > 0) {
-        var anterior = string(global.grafo_salas_length_last); // usamos índice anterior real
-        ds_list_add(ds_map_find_value(global.grafo, anterior), sala_index);
-        ds_list_add(ds_map_find_value(global.grafo, string(sala_index)), global.grafo_salas_length_last);
+		var sala_anterior = global.grafo_salas[global.grafo_salas_length_last];
+		var sala_atual = global.grafo_salas[sala_index];
+
+		array_push(sala_anterior.conexoes, sala_index);
+		array_push(sala_atual.conexoes, global.grafo_salas_length_last);
     }
 
     // salva o índice da última sala registrada válida
@@ -90,6 +102,10 @@ for(var xx = 0;xx<cell_h;xx++){
 			instance_create_layer(xx * cell_t, yy * cell_t, "instances", obj_colisao);
 		}
 		if(grid[# xx,yy] ==1 ){
+			
+			//Tiles para o chão
+			//tilemap_set(tilemap_id, 47, xx, yy);
+			
 			var x1 = xx*cell_t+cell_t/2;
 			var y1 = yy*cell_t+cell_t/2;
 			if(!instance_exists(obj_player)){
