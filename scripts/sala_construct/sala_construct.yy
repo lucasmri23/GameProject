@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sala_construct",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sala_construct",
+  "parent":{
+    "name":"Create_map",
+    "path":"folders/Scripts/Create_map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
