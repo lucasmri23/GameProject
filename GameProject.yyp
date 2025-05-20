@@ -47,7 +47,7 @@
     {"id":{"name":"mapa_criar_sala","path":"scripts/mapa_criar_sala/mapa_criar_sala.yy",},},
     {"id":{"name":"mapa_gerar_dungeon","path":"scripts/mapa_gerar_dungeon/mapa_gerar_dungeon.yy",},},
     {"id":{"name":"mapa_inicializar_globals","path":"scripts/mapa_inicializar_globals/mapa_inicializar_globals.yy",},},
-    {"id":{"name":"mapa_marcar_inicio_fim","path":"scripts/mapa_marcar_inicio_fim/mapa_marcar_inicio_fim.yy",},},
+    {"id":{"name":"mapa_marcar_tipo_sala","path":"scripts/mapa_marcar_tipo_sala/mapa_marcar_tipo_sala.yy",},},
     {"id":{"name":"mapa_popular_tiles_e_instancias","path":"scripts/mapa_popular_tiles_e_instancias/mapa_popular_tiles_e_instancias.yy",},},
     {"id":{"name":"sala_construct","path":"scripts/sala_construct/sala_construct.yy",},},
     {"id":{"name":"tilemap_autotile","path":"scripts/tilemap_autotile/tilemap_autotile.yy",},},

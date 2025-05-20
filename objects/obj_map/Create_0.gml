@@ -8,4 +8,4 @@ mapa_inicializar_globals();
 mapa_criar_grids();
 mapa_gerar_dungeon(45);
 mapa_popular_tiles_e_instancias(tilemap_id);
-mapa_marcar_inicio_fim();
+mapa_marcar_tipo_sala();

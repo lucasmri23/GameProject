@@ -7,7 +7,7 @@ function mapa_popular_tiles_e_instancias(tilemap_id){
 				// Coloca colisão como antes 
 				instance_create_layer(xx * cell_t, yy * cell_t, "instances", obj_colisao);
 			}
-		if (grid[# xx, yy] == global.TIPO_SALA || grid[# xx, yy] == global.TIPO_CORREDOR) {
+		if (grid[# xx, yy] == global.TIPO_SALA) {
 			
 			//Tiles para o chão
 			//tilemap_set(tilemap_id, 47, xx, yy);
