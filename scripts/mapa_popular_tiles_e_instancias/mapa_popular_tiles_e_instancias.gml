@@ -1,13 +1,13 @@
-function mapa_popular_tiles_e_instancias(){
+function mapa_popular_tiles_e_instancias(tilemap_id){
 	for(var xx = 0;xx<cell_h;xx++){
-	for(var yy = 0;yy<cell_v;yy++){
-		if (grid[# xx, yy] == 0) {
-			// Cria o tile usando autotile parede
-			tilemap_autotile(tilemap_id, xx, yy, true);
-			// Coloca colisão como antes 
-			instance_create_layer(xx * cell_t, yy * cell_t, "instances", obj_colisao);
-		}
-		if (grid[# xx, yy] == TIPO_SALA || grid[# xx, yy] == TIPO_CORREDOR) {
+		for(var yy = 0;yy<cell_v;yy++){
+			if (grid[# xx, yy] == 0) {
+				// Cria o tile usando autotile parede
+				tilemap_autotile(tilemap_id, xx, yy, true);
+				// Coloca colisão como antes 
+				instance_create_layer(xx * cell_t, yy * cell_t, "instances", obj_colisao);
+			}
+		if (grid[# xx, yy] == global.TIPO_SALA || grid[# xx, yy] == global.TIPO_CORREDOR) {
 			
 			//Tiles para o chão
 			//tilemap_set(tilemap_id, 47, xx, yy);
@@ -17,7 +17,7 @@ function mapa_popular_tiles_e_instancias(){
 			if(!instance_exists(obj_player)){
 				instance_create_layer(x1,y1,"instances",obj_player);
 			}
-			if(num_enemy1>0){
+			if(global.num_enemy1>0){
 				var chances = 5;
 				var enemy_min_dist_player = 130;
 				var enemy_min_dist_other = 100;
@@ -37,7 +37,7 @@ function mapa_popular_tiles_e_instancias(){
 					
 					if (is_far_from_player and is_far_from_others) {
 						instance_create_layer(x1, y1, "instances", obj_enemy1);
-						num_enemy1 -= 1;
+						global.num_enemy1 -= 1;
 					}
 				}
 			}
