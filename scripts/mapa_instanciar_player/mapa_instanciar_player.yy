@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"mapa_popular_tiles_e_instancias",
+  "%Name":"mapa_instanciar_player",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"mapa_popular_tiles_e_instancias",
+  "name":"mapa_instanciar_player",
   "parent":{
     "name":"Create_map",
     "path":"folders/Scripts/Create_map.yy",

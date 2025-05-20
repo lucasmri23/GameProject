@@ -1,12 +1,13 @@
 switch(estado){
 	case "parado":
-		var range = 100;
-		var vision = collision_line(x,y,obj_player.x,obj_player.y,obj_colisao,false,true)
-		if(distance_to_object(obj_player)<= range and !vision){
-			//segue
-			estado = "perseguicao";
+		if (instance_exists(obj_player)) {
+			var range = 100;
+			var vision = collision_line(x,y,obj_player.x,obj_player.y,obj_colisao,false,true)
+			if(distance_to_object(obj_player)<= range and !vision){
+				//segue
+				estado = "perseguicao";
 		}
-		
+	}
 		
 	break;
 	case "perseguicao":

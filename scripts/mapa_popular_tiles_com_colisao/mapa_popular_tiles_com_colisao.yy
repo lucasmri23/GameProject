@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"mapa_popular_tiles_com_colisao",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"mapa_popular_tiles_com_colisao",
+  "parent":{
+    "name":"Create_map",
+    "path":"folders/Scripts/Create_map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
