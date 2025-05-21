@@ -4,4 +4,5 @@ function Sala(_id, _x, _y) constructor {
     y = _y;
     conexoes = [];
     tipo = "comum";
+	alerta = false
 }

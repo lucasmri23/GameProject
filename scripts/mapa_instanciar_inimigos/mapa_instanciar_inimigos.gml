@@ -1,34 +1,56 @@
-function mapa_instanciar_inimigos(){
-	for (var xx = 0; xx < cell_h; xx++) {
-		for (var yy = 0; yy < cell_v; yy++) {
-			if (grid[# xx, yy] == global.TIPO_SALA && global.num_enemy1 > 0) {
-				var chances = 5;
-				var enemy_min_dist_player = 130;
-				var enemy_min_dist_other = 100;
+function mapa_instanciar_inimigos() {
+    var min_dist_player = 130;
+    var min_dist_others = 100;
 
-				if (irandom(chances) == chances) {
-					var x1 = xx * cell_t + cell_t / 2;
-					var y1 = yy * cell_t + cell_t / 2;
+    var sala_largura = 6; // em células (tiles) da grid
+    var sala_altura  = 6;
 
-					var is_far_from_player = true;
-					if (instance_exists(obj_player)) {
-						var dist_to_player = point_distance(x1, y1, obj_player.x, obj_player.y);
-						is_far_from_player = dist_to_player > enemy_min_dist_player;
-					}
+    for (var i = 0; i < array_length(global.grafo_salas); i++) {
+        var sala = global.grafo_salas[i];
 
-					var is_far_from_others = true;
-					with (obj_enemy1) {
-						if (point_distance(x, y, x1, y1) < enemy_min_dist_other) {
-							is_far_from_others = false;
-						}
-					}
+        // Pula a sala inicial
+        if (sala == global.sala_inicial) continue;
 
-					if (is_far_from_player && is_far_from_others) {
-						instance_create_layer(x1, y1, "instances", obj_enemy1);
-						global.num_enemy1 -= 1;
-					}
-				}
-			}
-		}
-	}
+        var sx = sala.x;
+        var sy = sala.y;
+
+        var area = sala_largura * sala_altura;
+        var quantidade = irandom_range(1, clamp(floor(area / 10), 2, 5)); // mais ajustado para densidade
+
+        var tentativas = 0;
+        var criados = 0;
+
+        while (criados < quantidade && tentativas < 100) {
+            tentativas++;
+
+            var cx = irandom_range(sx - sala_largura div 2 + 1, sx + sala_largura div 2 - 2);
+            var cy = irandom_range(sy - sala_altura div 2 + 1, sy + sala_altura div 2 - 2);
+
+            if (grid[# cx, cy] != global.TIPO_SALA) continue;
+
+            var x1 = cx * cell_t + cell_t / 2;
+            var y1 = cy * cell_t + cell_t / 2;
+
+            var dist_ok = true;
+
+            if (instance_exists(obj_player)) {
+                if (point_distance(obj_player.x, obj_player.y, x1, y1) < min_dist_player) {
+                    dist_ok = false;
+                }
+            }
+
+            if (dist_ok) {
+                with (obj_enemy1) {
+                    if (point_distance(x, y, x1, y1) < min_dist_others) {
+                        dist_ok = false;
+                    }
+                }
+            }
+
+            if (dist_ok) {
+                instance_create_layer(x1, y1, "instances", obj_enemy1);
+                criados++;
+            }
+        }
+    }
 }

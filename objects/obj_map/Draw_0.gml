@@ -25,7 +25,7 @@ if (global.exibir_grafo) {
                 draw_set_color(c_red);
                 break;
             default:
-                draw_set_color(c_lime);
+                draw_set_color(salaA.alerta ? c_orange : c_lime);
         }
 
         draw_circle(x1, y1, 5, false);
