@@ -37,3 +37,20 @@ if (global.exibir_grafo) {
         draw_text(x1 + 5, y1 - 10, string(i));
     }
 }
+for (var i = 0; i < array_length(global.grafo_salas); i++) {
+    var sala = global.grafo_salas[i];
+
+    if (is_struct(sala) && variable_instance_exists(sala, "alerta") && sala.alerta) {
+        if (variable_instance_exists(sala, "w") && variable_instance_exists(sala, "h")) {
+            var x1 = sala.x * cell_t;
+            var y1 = sala.y * cell_t;
+            var w = sala.w * cell_t;
+            var h = sala.h * cell_t;
+
+            draw_set_alpha(0.3);
+            draw_set_color(c_red);
+            draw_rectangle(x1, y1, x1 + w, y1 + h, true); // preenchido
+            draw_set_alpha(1);
+        }
+    }
+}

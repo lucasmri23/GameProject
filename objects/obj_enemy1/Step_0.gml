@@ -1,9 +1,9 @@
 // Atualiza sala do jogador e inimigo
 var sala_inimigo = mapa.grid_sala[# (x div cell_t), (y div cell_t)];
 var sala_jogador = mapa.grid_sala[# (obj_player.x div cell_t), (obj_player.y div cell_t)];
-
+var tem_visao = !collision_line(x, y, obj_player.x, obj_player.y, obj_colisao, true, false);
 // Verifica se o inimigo está na mesma sala que o jogador
-if (sala_inimigo != -1 && sala_inimigo == sala_jogador) {
+if (sala_inimigo != -1 && sala_inimigo == sala_jogador && tem_visao) {
     if (estado != "perseguicao") {
         estado = "perseguicao";
         ultima_sala_jogador = -1;
