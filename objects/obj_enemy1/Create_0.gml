@@ -4,7 +4,7 @@ caminho = path_add();
 velc = 1.5;
 
 ultima_sala_jogador = -1;
-visao = 160;
+visao = 100
 
 path_atual = -1;
 tempo_path_recalc = 0;
