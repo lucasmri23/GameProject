@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"propagar_alerta_bfs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"propagar_alerta_bfs",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

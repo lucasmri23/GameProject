@@ -26,19 +26,26 @@ function mapa_gerar_dungeon(room_count) {
         var sala_existente = sala_ja_existente(xx, yy, 3);
         var sala_index;
 
-        if (sala_existente == -1) {
-            sala_index = array_length(global.grafo_salas);
-            var nova_sala = new Sala(sala_index, xx, yy);
-            array_push(global.grafo_salas, nova_sala);
+		if (sala_existente == -1) {
+			sala_index = array_length(global.grafo_salas);
+			var nova_sala = new Sala(sala_index, xx, yy);
+			array_push(global.grafo_salas, nova_sala);
 
-            for (var i2 = xx - room_size; i2 <= xx + room_size; i2++) {
-                for (var j2 = yy - room_size; j2 <= yy + room_size; j2++) {
-                    grid_sala[# i2, j2] = sala_index;
-                }
-            }
+    // 🔧 Adicione este bloco:
+			if (!variable_global_exists("salas")) {
+				global.salas = ds_map_create();
+			}
+			global.salas[? nova_sala.id] = nova_sala;
 
-            var conexoes = ds_list_create();
-            ds_map_add(global.grafo, string(sala_index), conexoes);
+		for (var i2 = xx - room_size; i2 <= xx + room_size; i2++) {
+			for (var j2 = yy - room_size; j2 <= yy + room_size; j2++) {
+				grid_sala[# i2, j2] = sala_index;
+			}
+		}
+
+    var conexoes = ds_list_create();
+    ds_map_add(global.grafo, string(sala_index), conexoes);
+
         } else {
             sala_index = sala_existente;
         }

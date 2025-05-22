@@ -3,27 +3,36 @@ var sala_inimigo = mapa.grid_sala[# (x div cell_t), (y div cell_t)];
 var sala_jogador = mapa.grid_sala[# (obj_player.x div cell_t), (obj_player.y div cell_t)];
 var tem_visao = !collision_line(x, y, obj_player.x, obj_player.y, obj_colisao, true, false);
 
+// Se o jogo ainda não começou
 if (!global.jogo_iniciado) {
-    exit; // Não age até o jogo ser iniciado
+    exit;
 }
 
-// Verifica se o inimigo está na mesma sala que o jogador
+// Verifica se o inimigo vê o jogador na mesma sala
 if (sala_inimigo != -1 && sala_inimigo == sala_jogador && tem_visao) {
     if (estado != "perseguicao") {
         estado = "perseguicao";
         ultima_sala_jogador = -1;
+        alertou = false; // permite que esse inimigo alerte uma vez
 
         if (sala_inimigo >= 0 && sala_inimigo < array_length(global.grafo_salas)) {
             global.grafo_salas[sala_inimigo].alerta = true;
         }
     }
 } else if (estado != "perseguindo") {
-    // Volta para patrulha apenas se não estiver em perseguição visual
     estado = "patrulha";
     path_end();
 }
 
-// Lógica de estados
+// 🔔 Propagação de alerta (ocorre apenas uma vez por perseguição)
+if (estado == "perseguicao" && !alertou && sala_inimigo != -1) {
+    if (!global.grafo_salas[sala_inimigo].alerta) {
+        propagar_alerta_bfs(sala_inimigo, 1);
+    }
+    alertou = true;
+}
+
+// --- Lógica de estados ---
 switch (estado) {
     case "patrulha":
         var dist = point_distance(x, y, obj_player.x, obj_player.y);
@@ -35,7 +44,6 @@ switch (estado) {
         break;
 
     case "perseguindo":
-        // Recalcula o caminho para o jogador
         if (tempo_path_recalc <= 0) {
             var x2 = obj_player.x;
             var y2 = obj_player.y;
@@ -49,7 +57,7 @@ switch (estado) {
             tempo_path_recalc--;
         }
 
-        // Se perder o jogador de vista
+        // Perdeu o jogador de vista
         if (point_distance(x, y, obj_player.x, obj_player.y) > visao * 1.5) {
             estado = "patrulha";
             path_end();
@@ -61,7 +69,7 @@ switch (estado) {
                 if (id != other.id && point_distance(x, y, other.x, other.y) < 96) {
                     if (estado != "perseguindo") {
                         estado = "perseguindo";
-                        alertou = false; // permite que esse também alerte outros
+                        alertou = false;
                     }
                 }
             }
@@ -70,7 +78,6 @@ switch (estado) {
         break;
 
     case "perseguicao":
-        // Caminho baseado em sala
         if (point_distance(x, y, obj_player.x, obj_player.y) > 16) {
             ultima_sala_jogador = sala_jogador;
 
