@@ -35,6 +35,7 @@ if (estado == "perseguicao" && !alertou && sala_inimigo != -1) {
 // --- Lógica de estados ---
 switch (estado) {
     case "patrulha":
+		sprite_index = spr_enemy1_idle;
         var dist = point_distance(x, y, obj_player.x, obj_player.y);
         if (dist <= visao) {
             estado = "perseguindo";
@@ -75,6 +76,15 @@ switch (estado) {
             }
             alertou = true;
         }
+		
+		if(instance_exists(obj_player)){
+			if(obj_player.x>x){
+				sprite_index = spr_enemy1_run_rigth
+			}else if((obj_player.x<x)){
+				sprite_index = spr_enemy1_run_left
+			}	
+		}
+		
         break;
 
     case "perseguicao":
