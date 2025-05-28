@@ -8,6 +8,13 @@ if (!global.jogo_iniciado) {
     exit;
 }
 
+if (variable_instance_exists(id, "life")) {
+    if (life <= 0) {
+        instance_destroy();
+    }
+}
+
+
 // Verifica se o inimigo vê o jogador na mesma sala
 if (sala_inimigo != -1 && sala_inimigo == sala_jogador && tem_visao) {
     if (estado != "perseguicao") {

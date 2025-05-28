@@ -1,3 +1,4 @@
+life = 5;
 cell_t = 32;
 mapa = instance_find(obj_map, 0);
 caminho = path_add();
