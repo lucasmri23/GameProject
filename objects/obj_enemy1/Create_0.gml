@@ -3,7 +3,7 @@ life = 10;
 cell_t = 32;
 mapa = instance_find(obj_map, 0);
 caminho = path_add();
-velc = 1.5;
+velc = 1.2;
 
 ultima_sala_jogador = -1;
 visao = 100
