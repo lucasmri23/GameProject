@@ -1,3 +1,5 @@
+if(life <=0) instance_destroy();
+
 // Atualiza sala do jogador e inimigo
 var sala_inimigo = mapa.grid_sala[# (x div cell_t), (y div cell_t)];
 var sala_jogador = mapa.grid_sala[# (obj_player.x div cell_t), (obj_player.y div cell_t)];

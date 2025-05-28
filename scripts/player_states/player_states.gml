@@ -27,19 +27,21 @@ function player_state_free(){
 	if(mouse_check_button(mb_left)){	
 		if(mouse_x < x) image_xscale = -1 else image_xscale = 1;
 		image_index = 0;
-		if(instance_exists(obj_hitbox)) instance_destroy(obj_hitbox);
 		state = player_state_atk;
 	}
 }
 function player_state_atk(){
 	velh = 0;
 	velv = 0;
-	if(!instance_exists(obj_hitbox)){
-		//cria hitbox do atk
-		instance_create_layer(x + (10 * image_xscale),y,"tileset",obj_hitbox)
+	if(image_index > 2){
+		if(!instance_exists(obj_hitbox)){
+			//cria hitbox do atk
+			instance_create_layer(x + (10 * image_xscale),y+6,"tileset",obj_hitbox)
+		}
 	}
 	sprite_index = spr_player_atk
 	if(image_index >= image_number-1){
+		if(instance_exists(obj_hitbox)) instance_destroy(obj_hitbox);
 		state = player_state_free;
 	}
 }
