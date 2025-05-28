@@ -30,7 +30,7 @@
   ],
   "name":"spr_player_run",
   "nineSlice":null,
-  "origin":4,
+  "origin":7,
   "parent":{
     "name":"player_sprites",
     "path":"folders/Sprites/player_sprites.yy",
@@ -106,7 +106,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":17,
-    "yorigin":14,
+    "yorigin":29,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
