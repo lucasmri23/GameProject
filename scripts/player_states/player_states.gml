@@ -23,4 +23,15 @@ function player_state_free(){
 
 	velh = lengthdir_x(velc * teclas, move_dir);
 	velv = lengthdir_y(velc * teclas, move_dir);
+	
+	if(mouse_check_button(mb_left)){
+		image_index = 0;
+		state = player_state_atk;
+	}
+}
+function player_state_atk(){
+	sprite_index = spr_player_atk
+	if(image_index >= image_number-1){
+		state = player_state_free;
+	}
 }
