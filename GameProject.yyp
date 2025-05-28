@@ -54,6 +54,7 @@
     {"id":{"name":"mapa_instanciar_player","path":"scripts/mapa_instanciar_player/mapa_instanciar_player.yy",},},
     {"id":{"name":"mapa_marcar_tipo_sala","path":"scripts/mapa_marcar_tipo_sala/mapa_marcar_tipo_sala.yy",},},
     {"id":{"name":"mapa_popular_tiles_com_colisao","path":"scripts/mapa_popular_tiles_com_colisao/mapa_popular_tiles_com_colisao.yy",},},
+    {"id":{"name":"player_states","path":"scripts/player_states/player_states.yy",},},
     {"id":{"name":"propagar_alerta_bfs","path":"scripts/propagar_alerta_bfs/propagar_alerta_bfs.yy",},},
     {"id":{"name":"sala_construct","path":"scripts/sala_construct/sala_construct.yy",},},
     {"id":{"name":"tilemap_autotile","path":"scripts/tilemap_autotile/tilemap_autotile.yy",},},
