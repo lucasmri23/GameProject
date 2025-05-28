@@ -46,6 +46,7 @@
     {"id":{"name":"obj_map","path":"objects/obj_map/obj_map.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"enemy1_states","path":"scripts/enemy1_states/enemy1_states.yy",},},
     {"id":{"name":"mapa_criar_corredor","path":"scripts/mapa_criar_corredor/mapa_criar_corredor.yy",},},
     {"id":{"name":"mapa_criar_grids","path":"scripts/mapa_criar_grids/mapa_criar_grids.yy",},},
     {"id":{"name":"mapa_criar_sala","path":"scripts/mapa_criar_sala/mapa_criar_sala.yy",},},
