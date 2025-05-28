@@ -75,3 +75,19 @@ Inclua aqui prints, gifs ou vídeos mostrando a interface ou o funcionamento do 
 - Linguagens Formais e Autômatos
 
 ---
+🏫 Informações Acadêmicas
+Universidade: Universidade Braz Cubas
+Curso: Ciência da Computação
+Semestre: 5º
+Período: Noite
+Professora orientadora: Dra. Andréa Ono Sakai
+Evento: Mostra de Tecnologia 1º Semestre de 2025
+Local: Laboratório 12
+Datas: 05 e 06 de junho de 2025
+
+---
+
+📄 Licença
+MIT License — sinta-se à vontade para utilizar, estudar e adaptar este projeto.
+
+---
