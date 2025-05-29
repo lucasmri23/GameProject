@@ -1,5 +1,5 @@
 life = 10;
-depth = (-y)+1;
+depth = (-y)+10;
 
 cell_t = 32;
 mapa = instance_find(obj_map, 0);
@@ -14,6 +14,7 @@ tempo_path_recalc = 0;
 path_delay = 10;
 
 state = enemy1_state_idle;
+last_state = state;
 
 estado = "patrulha";
 alertou = false;

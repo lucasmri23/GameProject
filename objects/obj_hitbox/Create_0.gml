@@ -9,6 +9,9 @@ if(c > 0){
 			ds_list_add(hitbox_list,target);
 			with(target){
 				life -=5;
+				if (state != enemy1_state_hurt) {
+					state = enemy1_state_hurt;
+				}
 			}
 		}
 	}

@@ -83,3 +83,15 @@ function enemy1_state_chase() {
         state = enemy1_state_patrol;
     }
 }
+function enemy1_state_hurt() {
+    if (!variable_instance_exists(id, "hurt_started") || !hurt_started) {
+        hurt_started = true;
+        image_index = 0;
+		sprite_index = spr_enemy1_hurt_front;
+    }
+
+    if (image_index >= image_number - 1) {
+        hurt_started = false;
+        state = enemy1_state_patrol;
+    }
+}
