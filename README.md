@@ -13,9 +13,9 @@ onde o BFS sera essencial para a movimentação do inimigos.
 ## 👨‍💻 Tecnologias Utilizadas
 
 
-GameMaker Studio 2 (GML - GameMaker Language)
-Piskel
-BFS (Busca em Largura)
+GameMaker Studio 2 (GML - GameMaker Language).
+Piskel.
+BFS (Busca em Largura).
 
 ---
 
@@ -65,6 +65,7 @@ Inclua aqui prints, gifs ou vídeos mostrando a interface ou o funcionamento do 
 |------|--------|
 | Lucas Marques Ribeiro | github.com/lucasmri23 |
 | Cesar Augusto Salles Marcondes | github.com/CesarSalles01 |
+| Felipe Pereira Firmino | github.com/felipeaj21 |
 
 ---
 
