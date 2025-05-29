@@ -29,6 +29,11 @@ function player_state_free(){
 		image_index = 0;
 		state = player_state_atk;
 	}
+	
+	if(mouse_check_button(mb_right)){	
+		image_index = 0;
+		state = player_state_def;
+	}
 }
 function player_state_atk(){
 	velh = 0;
@@ -44,4 +49,15 @@ function player_state_atk(){
 		if(instance_exists(obj_hitbox)) instance_destroy(obj_hitbox);
 		state = player_state_free;
 	}
+}function player_state_def(){
+	velh = 0;
+	velv = 0;
+	sprite_index = spr_player_def;
+
+	image_index = 1;
+
+	// Mantém o estado enquanto o botão direito estiver pressionado
+	if(!mouse_check_button(mb_right)){
+		state = player_state_free;
+	}	
 }

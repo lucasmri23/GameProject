@@ -1,5 +1,5 @@
-resolution_width = 1600;
-resolution_height = 900;
+resolution_width = 1920;
+resolution_height = 1080;
 resolution_scale = 4; // define a escala, o quão perto a câmera vai ficar
 global.view_width = resolution_width / resolution_scale;
 global.view_height = resolution_height / resolution_scale;
