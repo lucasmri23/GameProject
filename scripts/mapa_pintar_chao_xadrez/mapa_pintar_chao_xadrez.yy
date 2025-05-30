@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"mapa_pintar_chao_xadrez",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"mapa_pintar_chao_xadrez",
+  "parent":{
+    "name":"Create_map",
+    "path":"folders/Scripts/Create_map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
