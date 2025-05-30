@@ -8,9 +8,12 @@ if(c > 0){
 		if(!ds_list_find_value(hitbox_list,target)){
 			ds_list_add(hitbox_list,target);
 			with(target){
-				life -=5;
-				if (state != player_state_hurt) {
-					state = player_state_hurt;
+				if(state = player_state_def) life-=0;
+				else {
+					life -=5;
+					if (state != player_state_hurt) {
+						state = player_state_hurt;
+					}
 				}
 			}
 		}
