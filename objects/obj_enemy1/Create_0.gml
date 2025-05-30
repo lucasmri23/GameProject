@@ -1,4 +1,5 @@
 life = 10;
+death_started = false;
 depth = (-y)+10;
 
 cell_t = 32;

@@ -133,3 +133,18 @@ function enemy1_state_hurt() {
         state = enemy1_state_chase;
     }
 }
+function enemy1_state_dead(){
+	velh = 0;
+	velv = 0;
+	sprite_index = spr_enemy1_death;
+	
+	if (!death_started) {
+		death_started = true;
+		image_index = 0;
+    }
+	    if (image_index >= image_number - 1) {
+			image_index = image_number - 1; // trava no último frame
+			instance_destroy();
+    }
+	
+}
