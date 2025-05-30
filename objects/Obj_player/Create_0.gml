@@ -1,5 +1,6 @@
 global.jogador = id;
 depth = -y;
+life = 15;
 
 velh = 0;
 velv = 0;

@@ -62,3 +62,15 @@ function player_state_atk(){
 		state = player_state_free;
 	}	
 }
+function player_state_hurt() {
+    if (!variable_instance_exists(id, "hurt_started") || !hurt_started) {
+        hurt_started = true;
+        image_index = 0;
+		sprite_index = spr_player_hurt;
+    }
+
+    if (image_index >= image_number - 1) {
+        hurt_started = false;
+        state = player_state_free;
+    }
+}

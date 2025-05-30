@@ -84,12 +84,41 @@ function enemy1_state_chase() {
     }
 	
 	if (point_distance(x, y, obj_player.x, obj_player.y) <= alcance_ataque && atk_cd <=0) {
+        image_xscale = (obj_player.x >= x) ? -1 : 1; //olha para o lado do jogador
+		image_index = 0;
 		state = enemy1_state_atk;
 		path_end();
 		exit;
 	}
 	
 }
+function enemy1_state_atk() {
+    velh = 0;
+    velv = 0;
+    sprite_index = spr_enemy1_atk;
+
+    // Criar hitbox no frame 5
+    if (image_index >= 5 && image_index < 6) {
+        if (!instance_exists(obj_hitbox_enemy1)) {
+            instance_create_layer(x - (9 * image_xscale), y + 8, "tileset", obj_hitbox_enemy1);
+        }
+    }
+    // Destruir hitbox no frame 8
+    if (image_index >= 8 && instance_exists(obj_hitbox_enemy1)) {
+        instance_destroy(obj_hitbox_enemy1);
+    }
+
+    // Finalizar animação
+    if (image_index >= image_number - 1) {
+        if (instance_exists(obj_hitbox_enemy1)) {
+            instance_destroy(obj_hitbox_enemy1);
+        }
+        atk_started = false;
+        atk_cd = 90;
+        state = enemy1_state_chase;
+    }
+}
+
 function enemy1_state_hurt() {
     if (!variable_instance_exists(id, "hurt_started") || !hurt_started) {
         hurt_started = true;
@@ -99,28 +128,6 @@ function enemy1_state_hurt() {
 
     if (image_index >= image_number - 1) {
         hurt_started = false;
-        state = enemy1_state_patrol;
-    }
-}
-function enemy1_state_atk(){
-    velh = 0;
-    velv = 0;
-
-    // Inicia o ataque se ainda não começou
-    if (!variable_instance_exists(id, "atk_started") || !atk_started) {
-        atk_started = true;
-		
-		if (instance_exists(obj_player)) {
-            image_xscale = (obj_player.x >= x) ? -1 : 1; //olha para o lado do jogador
-        }
-		
-        sprite_index = spr_enemy1_atk;
-        image_index = 0;
-    }
-
-    if (image_index >= image_number - 1) {
-        atk_started = false;
-		atk_cd = 90;//
         state = enemy1_state_chase;
     }
 }

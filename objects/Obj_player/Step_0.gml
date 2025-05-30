@@ -1,4 +1,5 @@
 script_execute(state)
+if(life <=0) instance_destroy();
 // Se o jogo ainda não foi iniciado
 if (!global.jogo_iniciado) {
     global.tempo_inicio_jogo++;
