@@ -76,3 +76,20 @@ function player_state_hurt() {
         state = player_state_free;
     }
 }
+function player_state_dead(){
+	velh = 0;
+	velv = 0;
+	sprite_index = spr_player_death;
+	
+	if (!death_started) {
+		death_started = true;
+		image_index = 0;
+    }
+	    if (image_index >= image_number - 1) {
+			global.player_morto = true;
+			image_index = image_number - 1; // trava no último frame
+			image_speed = 0;
+			room_restart();
+    }
+	
+}
