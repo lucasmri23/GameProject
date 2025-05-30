@@ -9,6 +9,9 @@ velc = 1.2;
 ultima_sala_jogador = -1;
 visao = 100
 
+alcance_ataque = 15;
+atk_cd = 0;
+
 path_atual = -1;
 tempo_path_recalc = 0;
 path_delay = 10;

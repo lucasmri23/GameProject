@@ -31,6 +31,7 @@ function player_state_free(){
 	}
 	
 	if(mouse_check_button(mb_right)){	
+		if(mouse_x < x) image_xscale = -1 else image_xscale = 1;
 		image_index = 0;
 		state = player_state_def;
 	}
