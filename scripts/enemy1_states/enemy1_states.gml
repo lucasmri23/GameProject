@@ -120,6 +120,8 @@ function enemy1_state_atk() {
 }
 
 function enemy1_state_hurt() {
+	velh = 0;
+	velv = 0;
     if (!variable_instance_exists(id, "hurt_started") || !hurt_started) {
         hurt_started = true;
         image_index = 0;
