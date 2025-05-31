@@ -1,4 +1,4 @@
-# 🚀 Nome do Projeto
+# 🚀 Ashes of Reverie
 
 Ashes of Reverie é um jogo com estilo RogueLike com visão Top-Down de aventura onde o jogador deve se aventurar por cavernas esquecidas pelo tempo com inimigos 
 que usaram os grafos para perseguir o jogador e se comunicarem entre si tentando evitar que o jogador conclua seu objetivo.  
