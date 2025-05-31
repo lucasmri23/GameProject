@@ -10,7 +10,7 @@ velc = 1.2;
 ultima_sala_jogador = -1;
 visao = 100
 
-alcance_ataque = 15;
+alcance_ataque = 20;
 atk_cd = 0;
 
 path_atual = -1;

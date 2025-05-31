@@ -41,7 +41,7 @@ function enemy1_state_chase() {
 
     // Recalcula o path
     if (tempo_path_recalc <= 0) {
-        if (mp_grid_path(global.grid_pathfinding, caminho, x, y, obj_player.x, obj_player.y, true)) {
+        if (mp_grid_path(global.grid_pathfinding, caminho, x, y, obj_player.x-(20*image_xscale), obj_player.y, true)) {
             path_start(caminho, velc, path_action_stop, false);
             path_atual = caminho;
         }
