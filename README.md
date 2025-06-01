@@ -1,51 +1,69 @@
 # 🚀 Ashes of Reverie
 
+**Resumo**  
 Ashes of Reverie é um jogo com estilo RogueLike com visão Top-Down de aventura onde o jogador deve se aventurar por cavernas esquecidas pelo tempo com inimigos 
 que usaram os grafos para perseguir o jogador e se comunicarem entre si tentando evitar que o jogador conclua seu objetivo.  
+
 ---
 
-## 🎯 Objetivo
+## 🎯 Objetivo  
 
 O objetivo desse jogo é proporcionar entretenimento e um desafio ao jogador por dos combates. A motivação do jogo visa criar uma hanbientaçao de exploração
 onde o BFS sera essencial para a movimentação do inimigos.
+
 ---
 
 ## 👨‍💻 Tecnologias Utilizadas
 
-
-GameMaker Studio 2 (GML - GameMaker Language).
-Piskel.
+GameMaker Studio 2 (GML - GameMaker Language).  
+Piskel.  
 BFS (Busca em Largura).
 
 ---
 
+## 📁 Estrutura do Projeto
+```text
 📦 GameProject
-├── 📁 sprites
-│   ├── spr_player_idle
-│   ├── spr_player_run
-│   └── spr_player_atk
 ├── 📁 objects
-│   ├── obj_player
-│   ├── obj_enemy1
-│   ├── obj_hitbox
-│   └── obj_colisao
-├── 📁 scripts
-│   └── player_states_atk
+│   ├── 📁 obj_player
+│   ├── 📁 obj_enemy1
+│   ├── 📁 obj_hitbox
+│   └── 📁 obj_colisao
+├── 📁 options
+│   ├── 📁 main
+│   ├── 📁 operagx
+│   └── 📁 windows
 ├── 📁 rooms
-│   └── room_1
-└── README.md
+│   └── 📄 room_1
+├── 📁 scripts
+│   ├── 📁 create_map
+│   │   └── ...(scripts relacionados à geração do mapa)
+│   ├── 📄 enemy1_states
+│   ├── 📄 player_states
+│   ├── 📄 propagar_alerta_bfs
+│   └── 📄 tilemap_autotile
+├── 📁 sprites
+│   ├── 📁 enemy1_sprites
+│   │   └── ...(sprites utilizados para o inimigo)
+│   ├── 📁 player_sprites
+│   │   └── ...(sprites utilizados para o player)
+│   ├── 📄 spr_colisao
+│   ├── 📄 spr_tileset
+│   └── 📄 spr_tileset_chao
+├── 📁 tilesets
+│   ├── 📄 ts_chao
+│   └── 📄 ts_tileset
+├── 📄 GameProject.ypp ← Arquivo principal do projeto do GameMaker Studio
+└── 📄 README.md
+```
 
+## ⚙️ Como Executar
 
-⚙️ Como Executar
-✅ Rodando Localmente no GameMaker Studio
-1. Clone o repositório:
+### ✅ Rodando Localmente
 
-git clone https://github.com/lucasmri23/GameProject.git
-cd GameProject
-
-2.Abra o projeto no GameMaker Studio 2.
-
-3.Compile e rode o jogo dentro do ambiente do GameMaker.
+```
+Instruções de execução serão incluídas em breve.
+```
 
 ---
 
@@ -63,32 +81,33 @@ Inclua aqui prints, gifs ou vídeos mostrando a interface ou o funcionamento do 
 
 | Nome | GitHub |
 |------|--------|
-| Lucas Marques Ribeiro | github.com/lucasmri23 |
-| Cesar Augusto Salles Marcondes | github.com/CesarSalles01 |
-| Felipe Pereira Firmino | github.com/felipeaj21 |
+| Lucas Marques Ribeiro | [@lucasmri23](https://github.com/lucasmri23) |
+| Cesar Augusto Salles Marcondes | [@CesarSalles01](https://github.com/CesarSalles01) |
+| Felipe Pereira Firmino | [felipeaj21](https://github.com/felipeaj21) |
 
 ---
 
 ## 🧠 Disciplinas Envolvidas
 
-- Estrutura de Dados I
 - Teoria dos Grafos
-- Linguagens Formais e Autômatos
-
----
-🏫 Informações Acadêmicas
-Universidade: Universidade Braz Cubas
-Curso: Ciência da Computação
-Semestre: 5º
-Período: Noite
-Professora orientadora: Dra. Andréa Ono Sakai
-Evento: Mostra de Tecnologia 1º Semestre de 2025
-Local: Laboratório 12
-Datas: 05 e 06 de junho de 2025
 
 ---
 
-📄 Licença
+## 🏫 Informações Acadêmicas
+
+- Universidade: **Centro Universitário Braz Cubas**
+- Curso: **Ciência da Computação**
+- Semestre: 5º
+- Período: Noite
+- Professora orientadora: **Dra. Andréa Ono Sakai**
+- Evento: **Mostra de Tecnologia 1º Semestre de 2025**
+- Local: Laboratório 12
+- Datas: 05 e 06 de junho de 2025
+
+---
+
+## 📄 Licença
+
 MIT License — sinta-se à vontade para utilizar, estudar e adaptar este projeto.
 
 ---
