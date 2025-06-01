@@ -1,15 +1,13 @@
 # 🚀 Ashes of Reverie
 
 **Resumo**  
-Ashes of Reverie é um jogo com estilo RogueLike com visão Top-Down de aventura onde o jogador deve se aventurar por cavernas esquecidas pelo tempo com inimigos 
-que usaram os grafos para perseguir o jogador e se comunicarem entre si tentando evitar que o jogador conclua seu objetivo.  
+Ashes of Reverie é um jogo de aventura com estilo RogueLike e visão Top-Down, no qual o jogador explora cavernas esquecidas pelo tempo. Nesses ambientes, ele enfrenta inimigos que utilizam grafos para persegui-lo e se comunicarem entre si, com o objetivo de impedir que ele alcance seu objetivo final.  
 
 ---
 
 ## 🎯 Objetivo  
 
-O objetivo desse jogo é proporcionar entretenimento e um desafio ao jogador por dos combates. A motivação do jogo visa criar uma hanbientaçao de exploração
-onde o BFS sera essencial para a movimentação do inimigos.
+O objetivo deste jogo é proporcionar entretenimento e um desafio ao jogador por meio dos combates. A proposta do jogo é criar uma ambientação de exploração, na qual o BFS será essencial para a movimentação dos inimigos.
 
 ---
 
