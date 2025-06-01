@@ -23,34 +23,34 @@ BFS (Busca em Largura).
 ```text
 📦 GameProject
 ├── 📁 objects
-│   ├── 📁 obj_player
-│   ├── 📁 obj_enemy1
-│   ├── 📁 obj_hitbox
-│   └── 📁 obj_colisao
+│    ├── 📁 obj_player
+│    ├── 📁 obj_enemy1
+│    ├── 📁 obj_hitbox
+│    └── 📁 obj_colisao
 ├── 📁 options
-│   ├── 📁 main
-│   ├── 📁 operagx
-│   └── 📁 windows
+│    ├── 📁 main
+│    ├── 📁 operagx
+│    └── 📁 windows
 ├── 📁 rooms
-│   └── 📄 room_1
+│    └── 📄 room_1
 ├── 📁 scripts
-│   ├── 📁 create_map
-│   │   └── ...(scripts relacionados à geração do mapa)
-│   ├── 📄 enemy1_states
-│   ├── 📄 player_states
-│   ├── 📄 propagar_alerta_bfs
-│   └── 📄 tilemap_autotile
+│    ├── 📁 create_map
+│    │   └── ...(scripts relacionados à geração do mapa)
+│    ├── 📄 enemy1_states
+│    ├── 📄 player_states
+│    ├── 📄 propagar_alerta_bfs
+│    └── 📄 tilemap_autotile
 ├── 📁 sprites
-│   ├── 📁 enemy1_sprites
-│   │   └── ...(sprites utilizados para o inimigo)
-│   ├── 📁 player_sprites
-│   │   └── ...(sprites utilizados para o player)
-│   ├── 📄 spr_colisao
-│   ├── 📄 spr_tileset
-│   └── 📄 spr_tileset_chao
+│    ├── 📁 enemy1_sprites
+│    │   └── ...(sprites utilizados para o inimigo)
+│    ├── 📁 player_sprites
+│    │   └── ...(sprites utilizados para o player)
+│    ├── 📄 spr_colisao
+│    ├── 📄 spr_tileset
+│    └── 📄 spr_tileset_chao
 ├── 📁 tilesets
-│   ├── 📄 ts_chao
-│   └── 📄 ts_tileset
+│    ├── 📄 ts_chao
+│    └── 📄 ts_tileset
 ├── 📄 GameProject.ypp ← Arquivo principal do projeto do GameMaker Studio
 └── 📄 README.md
 ```
