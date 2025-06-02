@@ -63,6 +63,7 @@
     {"id":{"name":"mapa_marcar_tipo_sala","path":"scripts/mapa_marcar_tipo_sala/mapa_marcar_tipo_sala.yy",},},
     {"id":{"name":"mapa_pintar_chao_xadrez","path":"scripts/mapa_pintar_chao_xadrez/mapa_pintar_chao_xadrez.yy",},},
     {"id":{"name":"mapa_popular_tiles_com_colisao","path":"scripts/mapa_popular_tiles_com_colisao/mapa_popular_tiles_com_colisao.yy",},},
+    {"id":{"name":"menu_pause","path":"scripts/menu_pause/menu_pause.yy",},},
     {"id":{"name":"menu","path":"scripts/menu/menu.yy",},},
     {"id":{"name":"player_states","path":"scripts/player_states/player_states.yy",},},
     {"id":{"name":"propagar_alerta_bfs","path":"scripts/propagar_alerta_bfs/propagar_alerta_bfs.yy",},},
