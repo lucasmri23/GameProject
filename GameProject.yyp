@@ -39,6 +39,7 @@
   "name":"GameProject",
   "resources":[
     {"id":{"name":"ft_menu","path":"fonts/ft_menu/ft_menu.yy",},},
+    {"id":{"name":"ft_pause","path":"fonts/ft_pause/ft_pause.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_colisao","path":"objects/obj_colisao/obj_colisao.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
@@ -47,6 +48,7 @@
     {"id":{"name":"obj_hitbox","path":"objects/obj_hitbox/obj_hitbox.yy",},},
     {"id":{"name":"obj_map","path":"objects/obj_map/obj_map.yy",},},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
+    {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room_menu","path":"rooms/Room_menu/Room_menu.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
@@ -61,6 +63,7 @@
     {"id":{"name":"mapa_marcar_tipo_sala","path":"scripts/mapa_marcar_tipo_sala/mapa_marcar_tipo_sala.yy",},},
     {"id":{"name":"mapa_pintar_chao_xadrez","path":"scripts/mapa_pintar_chao_xadrez/mapa_pintar_chao_xadrez.yy",},},
     {"id":{"name":"mapa_popular_tiles_com_colisao","path":"scripts/mapa_popular_tiles_com_colisao/mapa_popular_tiles_com_colisao.yy",},},
+    {"id":{"name":"menu","path":"scripts/menu/menu.yy",},},
     {"id":{"name":"player_states","path":"scripts/player_states/player_states.yy",},},
     {"id":{"name":"propagar_alerta_bfs","path":"scripts/propagar_alerta_bfs/propagar_alerta_bfs.yy",},},
     {"id":{"name":"sala_construct","path":"scripts/sala_construct/sala_construct.yy",},},

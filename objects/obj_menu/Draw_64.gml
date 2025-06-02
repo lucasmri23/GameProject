@@ -2,13 +2,13 @@ draw_set_font(ft_menu);
 var gui_width = display_get_gui_width();
 var gui_height = display_get_gui_height(); 
 var x1 = gui_width / 2;
-var y1 = gui_height / 2;
+var y1 = gui_height / 3;
 var margin = 75;
 var m_x = device_mouse_x_to_gui(0);
 var m_y = device_mouse_y_to_gui(0);
 
 draw_set_halign(fa_center);
-draw_set_valign(fa_center);
+draw_set_valign(fa_middle);
 
 for(var i = 0; i  <op_max; i++){
 	var y2 = y1 + (margin *i);
@@ -19,11 +19,7 @@ for(var i = 0; i  <op_max; i++){
 		draw_set_color(c_orange);
 		index = i;
 		if(mouse_check_button_pressed(mb_left)){
-			if(index == 3){
-				game_end();
-			}else if(index == 0){
-				room_goto_next();
-			}
+			menu(index);
 		}
 	}else{
 		draw_set_color(c_white);
