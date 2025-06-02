@@ -38,6 +38,7 @@
   },
   "name":"GameProject",
   "resources":[
+    {"id":{"name":"ft_menu","path":"fonts/ft_menu/ft_menu.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_colisao","path":"objects/obj_colisao/obj_colisao.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
@@ -45,7 +46,9 @@
     {"id":{"name":"obj_hitbox_enemy1","path":"objects/obj_hitbox_enemy1/obj_hitbox_enemy1.yy",},},
     {"id":{"name":"obj_hitbox","path":"objects/obj_hitbox/obj_hitbox.yy",},},
     {"id":{"name":"obj_map","path":"objects/obj_map/obj_map.yy",},},
+    {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"Room_menu","path":"rooms/Room_menu/Room_menu.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"enemy1_states","path":"scripts/enemy1_states/enemy1_states.yy",},},
     {"id":{"name":"mapa_criar_corredor","path":"scripts/mapa_criar_corredor/mapa_criar_corredor.yy",},},
@@ -86,6 +89,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Room_menu","path":"rooms/Room_menu/Room_menu.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "templateType":"game",
