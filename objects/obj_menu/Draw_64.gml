@@ -17,6 +17,14 @@ for(var i = 0; i  <op_max; i++){
 	
 	if(point_in_rectangle(m_x,m_y,x1 - string_w / 2,y2 - string_h / 2,x1 + string_w / 2,y2 + string_h / 2)){
 		draw_set_color(c_orange);
+		index = i;
+		if(mouse_check_button_pressed(mb_left)){
+			if(index == 3){
+				game_end();
+			}else if(index == 0){
+				room_goto_next();
+			}
+		}
 	}else{
 		draw_set_color(c_white);
 	}
