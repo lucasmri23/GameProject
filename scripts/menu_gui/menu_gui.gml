@@ -10,19 +10,19 @@ var m_y = device_mouse_y_to_gui(0);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-for(var i = 0; i  <op_max; i++){
+for(var i = 0; i  <global.op_max_menu; i++){
 	var y2 = y1 + (margin *i);
-	var string_w = string_width(options[i]);
-	var string_h = string_height(options[i]);
+	var string_w = string_width(global.options_menu[i]);
+	var string_h = string_height(global.options_menu[i]);
 	
 	if(point_in_rectangle(m_x,m_y,x1 - string_w / 2,y2 - string_h / 2,x1 + string_w / 2,y2 + string_h / 2)){
 		draw_set_color(c_orange);
-		index = i;
+		global.index_menu = i;
 		if(mouse_check_button_pressed(mb_left)){
-			menu(index);
+			menu(global.index_menu);
 		}
 	}else{
 		draw_set_color(c_white);
 	}
-	draw_text(x1,y2,options[i]);
+	draw_text(x1,y2,global.options_menu[i]);
 }

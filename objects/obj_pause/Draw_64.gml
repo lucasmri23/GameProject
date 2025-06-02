@@ -26,7 +26,7 @@ if(global.pause){
 			draw_set_color(c_orange);
 			index = i;
 			if(mouse_check_button_pressed(mb_left)){
-				menu(index);
+				menu_pause(index);
 			}
 		}else{
 			draw_set_color(c_white);
