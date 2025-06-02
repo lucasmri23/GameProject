@@ -1,13 +1,13 @@
-# 🚀 Ashes of Reverie
+# 🛡️ Ashes of Reverie Songs Of The Fallen
 
 **Resumo**  
-Ashes of Reverie é um jogo de aventura com estilo RogueLike e visão Top-Down, no qual o jogador explora cavernas esquecidas pelo tempo. Nesses ambientes, ele enfrenta inimigos que utilizam grafos para persegui-lo e se comunicarem entre si, com o objetivo de impedir que ele alcance seu objetivo final.  
+*Ashes of Reverie* é um jogo de aventura no estilo Roguelike, com visão top-down, em que o jogador explora masmorras esquecidas pelo tempo em busca dos segredos que elas escondem. Durante essa jornada, ele enfrentará diferentes tipos de inimigos — cada um mais perigoso e inteligente que o outro — até alcançar seu limite.
 
 ---
 
 ## 🎯 Objetivo  
 
-O objetivo deste jogo é proporcionar entretenimento e um desafio ao jogador por meio dos combates. A proposta do jogo é criar uma ambientação de exploração, na qual o BFS será essencial para a movimentação dos inimigos.
+O principal objetivo deste projeto é demonstrar como diversos conceitos da ciência da computação estão presentes no nosso cotidiano, especialmente nos jogos digitais, muitas vezes sem que percebamos. A proposta do jogo é ilustrar, de forma prática e interativa, como estruturas de dados e a teoria dos grafos desempenham um papel fundamental em mecânicas como geração de mapas, propagação de alertas e comportamento de inteligência artificial.
 
 ---
 
