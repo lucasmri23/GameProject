@@ -89,7 +89,7 @@ function player_state_dead(){
 			global.player_morto = true;
 			image_index = image_number - 1; // trava no último frame
 			image_speed = 0;
-			room_restart();
+			room_goto(Room_game_over);
     }
 	
 }

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"menu_pause",
+  "%Name":"menu_game_over",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"menu_pause",
+  "name":"menu_game_over",
   "parent":{
     "name":"menus",
     "path":"folders/Scripts/menus.yy",

@@ -17,7 +17,5 @@ function menu_pause (index){
 		case 4:
 			game_end();
 		break;
-	
-	
 	}
 }

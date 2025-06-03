@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"menu",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"menus",
+    "path":"folders/Scripts/menus.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
