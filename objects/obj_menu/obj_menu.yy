@@ -9,8 +9,8 @@
   "name":"obj_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Room_menu",
+    "path":"folders/Objects/Room_menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,
