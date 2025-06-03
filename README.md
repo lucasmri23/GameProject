@@ -60,7 +60,9 @@ BFS (Busca em Largura).
 ### ✅ Rodando Localmente
 
 ```
-Instruções de execução serão incluídas em breve.
+  1. baixar o arquivo executável;
+  2. instalar o jogo;
+  3. abrir o jogo através do atalho;
 ```
 
 ---
