@@ -14,5 +14,5 @@ script_execute(state);
 
 // Se o jogo ainda não começou
 if (!global.jogo_iniciado) {
-    exit;
+    exit;
 }

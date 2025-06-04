@@ -76,6 +76,7 @@
     {"id":{"name":"player_states","path":"scripts/player_states/player_states.yy",},},
     {"id":{"name":"propagar_alerta_bfs","path":"scripts/propagar_alerta_bfs/propagar_alerta_bfs.yy",},},
     {"id":{"name":"sala_construct","path":"scripts/sala_construct/sala_construct.yy",},},
+    {"id":{"name":"solicitar_reforco","path":"scripts/solicitar_reforco/solicitar_reforco.yy",},},
     {"id":{"name":"tilemap_autotile","path":"scripts/tilemap_autotile/tilemap_autotile.yy",},},
     {"id":{"name":"spr_colisao","path":"sprites/spr_colisao/spr_colisao.yy",},},
     {"id":{"name":"spr_enemy1_atk","path":"sprites/spr_enemy1_atk/spr_enemy1_atk.yy",},},

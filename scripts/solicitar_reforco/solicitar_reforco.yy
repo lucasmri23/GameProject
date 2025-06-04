@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"solicitar_reforco",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"solicitar_reforco",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
