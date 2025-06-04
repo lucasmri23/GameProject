@@ -6,7 +6,7 @@ function menu (index){
 			room_goto_next();
 		break;
 		case 1:
-			
+			//room_goto(Room_win);
 		break;
 		case 2:
 		break;

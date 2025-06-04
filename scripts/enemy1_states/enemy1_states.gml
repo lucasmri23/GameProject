@@ -155,7 +155,7 @@ function enemy1_state_dead(){
 
 			// Verifica vitória
 			if (global.inimigos_vivos <= 0){
-				room_goto(Room_game_over);
+				room_goto(Room_win);
 			}
 			instance_destroy();
     }
