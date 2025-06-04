@@ -5,6 +5,7 @@ function mapa_inicializar_globals() {
     cell_h = room_width div cell_t;
     cell_v = room_height div cell_t;
 
+	global.inimigos_vivos = 0;
     global.grafo = ds_map_create();
     global.grafo_salas = [];
     global.grafo_salas_length_last = -1;

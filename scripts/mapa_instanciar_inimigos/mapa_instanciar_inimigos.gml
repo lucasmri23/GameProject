@@ -49,6 +49,7 @@ function mapa_instanciar_inimigos() {
 
             if (dist_ok) {
                 var novo_inimigo = instance_create_layer(x1, y1, "instances", obj_enemy1);
+				global.inimigos_vivos += 1;
                 criados++;
                 
                 // Atribui o ID da sala ao inimigo e incrementa o contador de inimigos na sala
