@@ -8,6 +8,8 @@ if (!variable_global_exists("resolution_width_selected")) {
 resolution_width  = global.resolution_width_selected;
 resolution_height = global.resolution_height_selected;
 resolution_scale  = global.resolution_scale_selected;
+view_spd = 0.1;
+view_target = obj_player;
 
 global.view_width  = resolution_width / resolution_scale;
 global.view_height = resolution_height / resolution_scale;
