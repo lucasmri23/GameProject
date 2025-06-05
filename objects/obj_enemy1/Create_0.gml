@@ -26,4 +26,4 @@ alertou = false; // Indica se este inimigo já propagou o alerta via BFS para su
 // Variáveis para o sistema de reforço
 minha_sala_id = -1; // O ID da sala em que este inimigo está. Atribuído ao ser criado.
 tempo_prox_reforco = 0; // Contador para o cooldown de pedido de reforço
-tempo_reforco_cooldown = 180; // Cooldown de 3 segundos (60 frames/seg * 3)
+tempo_reforco_cooldown = 60; // Cooldown de 3 segundos (60 frames/seg * 3)
