@@ -72,11 +72,11 @@ BFS (Busca em Largura).
 Inclua aqui prints, gifs ou vídeos mostrando a interface ou o funcionamento do sistema:
 
 - Tela inicial
-  ![menu](assets/Ashes_menu.png);
+  ![menu](assets/Ashes_menu.png)
 - Jogo em execução
-  ![jogo](assets/Ashes_menu_pause.png);
+  ![jogo](assets/Ashes_jogo.png)
 - Tela de pausa
-  ![pause](assets/Ashes_menu.png);
+  ![pause](assets/Ashes_menu_pause.png)
 ---
 
 ## 👥 Equipe
