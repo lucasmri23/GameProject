@@ -60,7 +60,7 @@ BFS (Busca em Largura).
 ### ✅ Rodando Localmente
 
 ```
-  1. baixar o arquivo executável;
+  1. baixar o arquivo executável "GameProject.exe"
   2. instalar o jogo;
   3. abrir o jogo através do atalho;
 ```
