@@ -6,7 +6,11 @@ function menu (index){
 			room_goto_next();
 		break;
 		case 1:
-			//room_goto(Room_win);
+			// Mostrar créditos
+            obj_creditos.visible = true;
+            obj_botao_voltar.visible = true;
+            // Esconder o menu principal (opcional)
+            obj_menu.visible = false;
 		break;
 		case 2:
 		break;
