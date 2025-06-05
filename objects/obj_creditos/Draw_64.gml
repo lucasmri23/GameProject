@@ -7,9 +7,11 @@ if (visible) {
     
     draw_text(centro_x, 100, 
         "CRÉDITOS\n\n" +
-        "Desenvolvido por: Seu Nome\n" +
-        "Música: Nome do artista\n" +
-        "Fontes: XYZ\n\n" +
-        "Obrigado por jogar!"
+        "Desenvolvido por: Lucas Marques Ribeiro\n" +
+        "Professor(a) Orientador(a): Dra. Andrea Ono Sakai\n" +
+        "Universidade: Centro Universitário Braz Cuabs\n\n" +
+        "Sprite do cavaleiro: Artwork created by Raphael Gonçalves email: rgsdev83@gmail.com\n" +
+        "Sprite dos slimes: https://craftpix.net/file-licenses\n\n" +
+		"Obrigado por jogar!"
     );
 }
